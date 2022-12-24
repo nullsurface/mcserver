@@ -11,6 +11,8 @@ COPY ./Paper ./Paper
 COPY ./server ./server
 COPY ./build.sh .
 
+RUN ./build.sh
+
 WORKDIR /mcserver/server
 
 CMD ["./run.sh"]
