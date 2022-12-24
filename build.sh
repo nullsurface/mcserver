@@ -1,3 +1,5 @@
 #!/bin/bash
-./Paper/gradlew applyPatches
-./Paper/gradlew createReobfBundlerJar
+cd ./Paper/
+
+./gradlew applyPatches
+./gradlew createReobfBundlerJar
