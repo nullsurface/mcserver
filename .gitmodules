@@ -1,0 +1,3 @@
+[submodule "Paper"]
+	path = Paper
+	url = git@github.com:PaperMC/Paper.git
