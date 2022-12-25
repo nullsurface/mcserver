@@ -1,3 +1,10 @@
-Creating a minecraft server image to learn the basics of Docker.
+Creating a Minecraft server image to learn the basics of Docker.
 
-Run ./build to create the latest paper server jar, then create docker image and the image.
+Step 1:
+Run 'git submodule update --init --recursive' to clone the latest version of PaperMC server
+
+Step 2:
+Run './build' to build the latest PaperMC Server Jar.
+
+Step 3:
+Build the docker image and run the container.
