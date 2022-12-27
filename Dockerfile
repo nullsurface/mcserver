@@ -14,4 +14,5 @@ COPY ./eula.txt ./server/eula.txt
 
 WORKDIR /mcserver/server
 
+CMD ["./build"]
 CMD ["./run.sh"]
