@@ -9,10 +9,9 @@ RUN mkdir server
 
 COPY ./Paper ./Paper
 COPY ./server ./server
-COPY ./build.sh .
+COPY ./server/build.sh ./server
 COPY ./eula.txt ./server/eula.txt
 
 WORKDIR /mcserver/server
 
-CMD ["./build"]
 CMD ["./run.sh"]

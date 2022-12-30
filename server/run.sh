@@ -1,2 +1,2 @@
 #!/bin/bash
-java -Xms2G -Xmx2G -jar ./paper.jar --nogui
+./build.sh && java -Xms2G -Xmx2G -jar ./paper.jar --nogui
