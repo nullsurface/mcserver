@@ -1,5 +1,13 @@
 services:
-  mcserver:
+  paper:
     build: .
     ports:
       - "25565:25565"
+    volumes:
+      - mc_world:/server/world
+      - mc_world_nether:/server/world_nether
+      - mc_world_the_end:/server/world_the_end
+volumes:
+  mc_world:
+  mc_world_nether:
+  mc_world_the_end:
