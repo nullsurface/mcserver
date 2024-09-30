@@ -11,7 +11,6 @@ server/logs/
 server/ops.json
 server/permissions.yml
 server/plugins/
-server/server.properties
 server/spigot.yml
 server/usercache.json
 server/version_history.json

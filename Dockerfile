@@ -1,17 +1,16 @@
 FROM openjdk:17-oracle
 
-RUN mkdir /mcserver
+COPY ./Paper /Paper
+COPY ./server /server
 
-WORKDIR /mcserver
+WORKDIR /Paper
+RUN git submodule update --init --recursive
+RUN git checkout master
+RUN ./gradlew applyPatches
+RUN ./gradlew createReobfBundlerJar
 
-RUN mkdir Paper
-RUN mkdir server 
+WORKDIR /
+cp /Paper/build/libs/paper-*.jar /server/paper.jar
 
-COPY ./Paper ./Paper
-COPY ./server ./server
-COPY ./server/build.sh ./server
-COPY ./eula.txt ./server/eula.txt
-
-WORKDIR /mcserver/server
-
-CMD ["./run.sh"]
+WORKDIR /server
+CMD ["java -Xms2G -Xmx2G -jar ./paper.jar --nogui"]

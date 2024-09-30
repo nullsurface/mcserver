@@ -1,0 +1,5 @@
+services:
+  mcserver:
+    build: .
+    ports:
+      - "25565:25565"
